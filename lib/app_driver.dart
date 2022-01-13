@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
+import 'app/modules/getx/login_bindings.dart';
 import 'app/modules/overview.dart';
 
 void main() => runApp(const AppDriver());
@@ -9,10 +11,20 @@ class AppDriver extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(primarySwatch: Colors.blue),
-      home: Overview(title: 'Flutter Demo TextFormFields'),
+    // return MaterialApp(
+    //   title: 'Flutter Demo',
+    //   theme: ThemeData(primarySwatch: Colors.blue),
+    //   home: Overview(title: 'Flutter Demo TextFormFields'),
+    // );
+    return GetMaterialApp(
+      initialRoute: '/overview',
+      getPages: [
+        GetPage(
+          name: '/overview',
+          page: () => Overview(title: 'Flutter Demo'),
+          binding: LoginBinding(),
+        ),
+      ],
     );
   }
 }

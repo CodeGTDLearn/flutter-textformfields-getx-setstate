@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-class OnChangedTextFormFieldSetstate extends StatefulWidget {
+class OnChangedSetstate extends StatefulWidget {
   String title;
 
-  OnChangedTextFormFieldSetstate(this.title);
+  OnChangedSetstate(this.title);
 
   @override
-  _OnChangedTextFormFieldSetstateState createState() =>
-      _OnChangedTextFormFieldSetstateState();
+  _OnChangedSetstateState createState() =>
+      _OnChangedSetstateState();
 }
 
-class _OnChangedTextFormFieldSetstateState extends State<OnChangedTextFormFieldSetstate> {
+class _OnChangedSetstateState extends State<OnChangedSetstate> {
   late Future userFuture;
   String name = "Type your text...";
 
